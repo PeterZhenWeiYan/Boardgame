@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Wanted And Recruit-Login</title>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/lunbotu.css">
+		<script src="js/index.js"></script>
+		<style type="text/css">
+			.written{
+				color: white;
+				font-size: 18px;
+			}
+			
+			.written::after{
+				content: "";
+				width: 30px;
+				height: 30px;
+				display: inline-block;
+				border-radius: 50%;
+				background-color: white;
+				margin-left: 20px;
+			}
+			
+			.written::before{
+				content: "";
+				width: 30px;
+				height: 30px;
+				display: inline-block;
+				border-radius: 50%;
+				background-color: white;
+				margin-right: 20px;
+			}
+			
+			.option{
+				float: left;
+				width: 20%;
+				height: 100%;
+				margin-top: 20px;
+				background-image: url(images/tongji.jpg);
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+			
+			.content{
+				float: left;
+				width: 96%;
+				height: 98%;
+				margin-top: 20px;
+				margin-left: 1%;
+				background-image: url(images/bz.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			}
+			
+			.line{
+				float: right;
+				width: 2%;
+				height: 100%;
+				background-color: #ab965f;
+			}
+			
+			.up{
+				width: 100%;
+				height: 50%;
+				color: white;
+			}
+			
+			.tu{
+				float: left;
+				width: 50%;
+				height: 100%;
+			}
+			
+			.tu img{
+				width: 83%;
+				height: 83%;
+				margin:5% 10%;
+			}
+			
+			.zhang{
+				float: right;
+				width: 50%;
+				height: 100%;
+			}
+			
+			.down{
+				width: 100%;
+				height: 50%;
+				color: #ab965f;
+			}
+			
+			
+			.First_paragraph{
+				float: left;
+				width: 68%;
+				height: 100%;
+			}
+			
+			.chart{
+				float: right;
+				width: 32%;
+				height: 100%;
+			}
+			
+			.zhang p{
+				width: 100%;
+		     	font-size: 20px;
+				margin-top: 20px;
+				line-height: 36px;
+				padding-right: 15%;
+				text-align: justify;
+			}
+		
+		.chart img{
+			width: 90%;
+			height: 69%;
+			border-radius: 50%;
+			margin: 30% 5%;
+			display: block;
+		}
+		
+		.First_paragraph p{
+			width: 90%;
+		     	font-size: 20px;
+				margin-top: 20px;
+				line-height: 36px;
+				padding-left: 5%;
+				text-align: justify;
+		}
+		
+		.case{
+			height: 1000px;
+		}
+		
+		.ps{
+			margin-top: 100px;
+		}
+		
+		.dl{
+			width: 50%;
+			height: 30%;
+			margin: 10% 25%;
+		}
+		
+		.dl h1{
+			text-align: center;
+			line-height: 50px;
+			color: #ab965f;
+		}
+		
+		input{
+			width: 70%;
+			height: 50px;
+			margin: 18px 15%;
+			outline: none;
+			color: white;
+			border: transparent;
+			text-indent: 1em;
+			background-color: transparent;
+			border-bottom: 1px solid white;
+		}
+		
+		
+		/*Login button*/
+		button{
+			width: 60%;
+			height: 50px;
+			margin: 30px 20%;
+			background-color: #ab965f;
+			text-align: center;
+			line-height: 50px;
+			border: transparent;
+			font-size: 23px;
+			color: white;
+		}
+		</style>
+	</head>
+	<body>
+		<!--navigation bar-->
+		<div class="father">
+			<a href="index1.html"><div class="logo"></div></a>
+		<div class="nav">
+			<a href="index2.html">STORY BACKDROP</a>
+			<a href="index3.html">GAME INFO</a>
+			<a href="index4.html">COMMUNITY</a>
+			<a href="index5.html">VIDEO</a>
+		</div>
+		<div class="sig">
+			<div class="written">LOGIN</div>
+		</div>
+		</div>
+		
+		<!--Login box-->
+	     <div class="casket case">
+	     	<div class="content">
+	     		  <div class="dl">
+	     		  	   <h1>WANTED AND RECRUIT LOGIN CENTRE</h1>
+	     		  	   <input type="text" class="user" placeholder="Please enter user name or password" maxlength="10" name="" id="" value="" />
+	     		  	   <input type="password" class="mima" placeholder="Please input a password……" name="" id="" maxlength="15" value="" />
+	     		  	   <button class="btn">LOGIN</button>
+	     		  </div>
+	     	</div>
+	     	<div class="line"></div>
+           </div>	
+
+            <script>
+//          	After the page is loaded, it will be executed automatically
+            	window.addEventListener("load", function (){
+            		var user = document.querySelector(".user");
+            		var mima = document.querySelector(".mima");
+            		var btn = document.querySelector(".btn");
+            		
+//          		When you press login, 
+//          		you will first check whether the user name
+//          		and password are entered. If so, you will 
+//          		continue to check whether the user name and
+//          		password are entered incorrectly. If these
+//          		programs are OK, they will run successfully
+//          		and jump to the home page automatically
+            		
+            	     btn.addEventListener("click", function (){
+            	     	if(user.value == "" || mima.value == ""){
+            	     		alert("Please enter user name or password！");
+            	     	}else if(user.value != "123" || mima.value != "456"){
+            	     		alert("Please check whether the account or password is entered incorrectly！");
+            	     	}else{
+            	     		alert("Login successful！");
+            	     		window.location.href = "index1.html";
+            	     	}
+            	     })
+            	})
+            </script>
+        
+	</body>
+</html>
